@@ -1,0 +1,135 @@
+.header {
+  background: url(../../images/image-hero-desktop.jpg);
+  background-size: cover;
+  background-position: top;
+  height: 60vh;
+
+  display: flex;
+  justify-content: space-between;
+  padding: 6rem 22rem;
+  @media only screen and (max-width: 1000px) {
+    padding: 6rem 10rem;
+  }
+  @media only screen and (max-width: 800px) {
+    padding: 4rem 5rem;
+  }
+
+  &__nav {
+    display: flex;
+    list-style: none;
+    @media only screen and (max-width: 1000px) {
+      display: none;
+    }
+
+    & > * {
+      &:not(last-child) {
+        margin-left: 4rem;
+      }
+    }
+  }
+}
+.nav {
+  &__link {
+    color: $color-white;
+    text-decoration: none;
+    font-weight: 500;
+  }
+}
+
+.menu {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  position: fixed;
+
+  &__icon {
+    background-color: $color-white;
+    height: 2px;
+    width: 3rem;
+    border-radius: 0.5px;
+    z-index: 30;
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    display: none;
+    @media only screen and (max-width: 1000px) {
+      display: block;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      background-color: $color-white;
+      height: 2px;
+      width: 3rem;
+      border-radius: 0.5px;
+
+      margin-top: 0.7rem;
+      //   transform: rotate(-135deg);
+    }
+    &::after {
+      content: "";
+      display: block;
+      background-color: $color-white;
+      height: 2px;
+      width: 3rem;
+      border-radius: 0.5px;
+      margin-top: 0.7rem;
+      //   transform: rotate(135deg);
+    }
+  }
+  &__nav {
+    display: block;
+    background-color: white;
+    width: 50%;
+    z-index: 20;
+    position: absolute;
+    list-style: none;
+    left: 50%;
+    top: 10rem;
+    border-radius: 10px;
+    transform: translateX(-50%);
+    // margin: 20rem auto;
+    // margin-left: auto;
+    // margin-right: auto;
+
+    &--item {
+      padding: 2rem;
+    }
+
+    &--link {
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
+}
+
+.rotate {
+  background: transparent;
+
+  &::before,
+  &::after {
+    margin-top: 0;
+  }
+
+  &::after {
+    transform: rotate(-135deg);
+  }
+
+  &::before {
+    transform: rotate(135deg);
+  }
+}
+.show-menu {
+  width: 100%;
+  visibility: visible;
+  opacity: 1;
+}

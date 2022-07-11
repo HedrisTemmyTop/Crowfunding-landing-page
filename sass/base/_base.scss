@@ -1,0 +1,32 @@
+*,
+*:link,
+*::before,
+*::after,
+*:active {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  @media only screen and (max-width: 800px) {
+    font-size: 50%;
+  }
+  @media only screen and (max-width: 500px) {
+    font-size: 45%;
+  }
+}
+body {
+  font-size: 1.6rem;
+  font-family: "Commissioner", Arial;
+  line-height: 1.7;
+  font-weight: 400;
+  color: $color-gray;
+  //   margin: 0 auto;
+  //   width: 1440px;
+}
+.main {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}

@@ -1,0 +1,32 @@
+.btn {
+  color: $color-white;
+  border-radius: 100px;
+  background-color: $color-cyan-light;
+  padding: 1.5rem 3rem;
+  border: 0;
+  outline: none;
+
+  &--grey {
+    background-color: rgba($color-gray, 0.5);
+    color: $color-white;
+  }
+
+  &--bookmark {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba($color-gray, 0.2);
+    color: black;
+    width: 13rem;
+    position: relative;
+    @media only screen and (max-width: 900px) {
+      margin-left: 2rem;
+      max-width: 4.5rem;
+    }
+  }
+}
+.bookmark-icon {
+  width: 4.5rem;
+  height: 4.5rem;
+}

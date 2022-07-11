@@ -1,0 +1,36 @@
+.about {
+  background-color: $color-white;
+  border-radius: 10px;
+  padding: 3rem;
+  box-shadow: $light-box-shadow;
+  width: 58rem;
+  font-size: 1.3rem;
+  &-left {
+    display: flex;
+    align-items: center;
+  }
+
+  &__head {
+    color: black;
+  }
+
+  &__box {
+    border: 1px solid rgba($color-gray, 0.2);
+    border-radius: 10px;
+    padding: 2rem 1.5rem;
+
+    &--special {
+      opacity: 0.5;
+    }
+
+    &--text {
+      color: $color-cyan-light;
+      font-weight: bold;
+    }
+
+    &--head {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
